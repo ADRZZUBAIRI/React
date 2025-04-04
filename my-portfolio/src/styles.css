@@ -1,0 +1,153 @@
+/* src/styles.css */
+
+/* Base styles with smooth transitions */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100%;
+  transition: color 0.4s ease;
+}
+
+/* Keyframes for light mode background animation */
+@keyframes lightBgAnimation {
+  0%   { background-color: #f5f7fa; }
+  33%  { background-color: #e8f0fe; }
+  66%  { background-color: #f0f9ff; }
+  100% { background-color: #f5f7fa; }
+}
+
+/* Keyframes for dark mode background animation */
+@keyframes darkBgAnimation {
+  0%   { background-color: #1e1e2f; }
+  33%  { background-color: #2e2e44; }
+  66%  { background-color: #23233e; }
+  100% { background-color: #1e1e2f; }
+}
+
+/* Light mode with animated background */
+.light {
+  animation: lightBgAnimation 10s ease infinite;
+  color: #333;
+}
+
+/* Dark mode with animated background */
+.dark {
+  animation: darkBgAnimation 10s ease infinite;
+  color: #e0e0e0;
+}
+
+/* Navbar styling */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Main content padding */
+main {
+  padding: 2rem;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 3rem;
+}
+
+/* Portfolio project card styling */
+.project-card {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark .project-card {
+  background-color: rgba(50, 50, 70, 0.8);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* Contact Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  padding-right: 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.dark form {
+  background: rgba(30, 30, 50, 0.9);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+form button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #43a047;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 0.5rem;
+  }
+}

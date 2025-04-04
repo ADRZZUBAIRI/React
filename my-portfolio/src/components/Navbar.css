@@ -1,0 +1,221 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode (default) */
+body {
+  background-color: #f0f0f0; /* Light background */
+  color: #333; /* Dark text */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ddd; /* Light text */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #4A90E2, #9013FE);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+  background: linear-gradient(90deg, #333, #444); /* Dark navbar background */
+  color: #ddd; /* Light text in dark mode */
+}
+
+/* Logo */
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .logo a {
+  color: #ddd; /* Light logo color in dark mode */
+}
+
+.logo a:hover {
+  color: #FFD700;
+}
+
+body.dark-mode .logo a:hover {
+  color: #FFD700;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+body.dark-mode .nav-links a {
+  color: #ddd; /* Light text in dark mode */
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .theme-toggle {
+  color: #FFD700; /* Yellow icon in dark mode */
+}
+
+.theme-toggle:hover {
+  color: #FFD700;
+  transform: rotate(360deg);
+}
+
+/* Hamburger Menu */
+.nav-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .nav-icon {
+  color: #ddd; /* Light nav icon in dark mode */
+}
+
+.nav-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    display: none;
+  }
+
+  body.dark-mode .nav-links {
+    background: rgba(50, 50, 50, 0.9); /* Darker background in dark mode */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  body.dark-mode .nav-links a {
+    color: #ddd; /* Light text in dark mode */
+  }
+}
+
+/* Additional Global Styles for Dark Mode */
+body.dark-mode .container {
+  background-color: #121212; /* Dark background for the main container */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ddd; /* Light text for headers */
+}
+
+body.dark-mode p {
+  color: #bbb; /* Light text for paragraphs */
+}
+
+/* Buttons */
+button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode button {
+  background-color: #444; /* Dark button background */
+  color: #ddd; /* Light text for buttons */
+}
+
+button:hover {
+  background-color: #9013FE;
+}
+
+body.dark-mode button:hover {
+  background-color: #333; /* Dark button hover */
+}
