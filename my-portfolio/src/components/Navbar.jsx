@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaMoon, FaBars, FaTimes, FaSun } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "./Navbar.css"; // Assuming you have a CSS file for styling
 
@@ -43,9 +43,6 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           <Link to="/contact" onClick={closeMenu}>
             Contact
           </Link>
-          <button className="theme-toggle" onClick={toggleTheme}>
-            {isDarkMode ? <FaSun /> : <FaMoon />}
-          </button>
         </motion.div>
       </nav>
     </div>

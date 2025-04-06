@@ -1,6 +1,7 @@
 // src/pages/Contact.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import "./Contact.css"; // Assuming you have a CSS file for styling
 
 const Contact = () => {
   const [formData, setFormData] = useState({ email: "", message: "" });

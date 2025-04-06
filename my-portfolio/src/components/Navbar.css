@@ -2,19 +2,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Light Mode (default) */
-body {
   background-color: #f0f0f0; /* Light background */
   color: #333; /* Dark text */
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #121212; /* Dark background */
-  color: #ddd; /* Light text */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar Styles */
@@ -32,12 +22,6 @@ body.dark-mode {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode Navbar */
-body.dark-mode .navbar {
-  background: linear-gradient(90deg, #333, #444); /* Dark navbar background */
-  color: #ddd; /* Light text in dark mode */
-}
-
 /* Logo */
 .logo a {
   text-decoration: none;
@@ -47,15 +31,7 @@ body.dark-mode .navbar {
   transition: color 0.3s ease;
 }
 
-body.dark-mode .logo a {
-  color: #ddd; /* Light logo color in dark mode */
-}
-
 .logo a:hover {
-  color: #FFD700;
-}
-
-body.dark-mode .logo a:hover {
   color: #FFD700;
 }
 
@@ -73,10 +49,6 @@ body.dark-mode .logo a:hover {
   font-weight: 500;
   transition: transform 0.3s ease, color 0.3s ease;
   position: relative;
-}
-
-body.dark-mode .nav-links a {
-  color: #ddd; /* Light text in dark mode */
 }
 
 .nav-links a::after {
@@ -100,20 +72,6 @@ body.dark-mode .nav-links a {
   transform: scale(1.1);
 }
 
-/* Theme Toggle */
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode .theme-toggle {
-  color: #FFD700; /* Yellow icon in dark mode */
-}
-
 .theme-toggle:hover {
   color: #FFD700;
   transform: rotate(360deg);
@@ -128,10 +86,6 @@ body.dark-mode .theme-toggle {
   border: none;
   color: white;
   transition: transform 0.3s ease;
-}
-
-body.dark-mode .nav-icon {
-  color: #ddd; /* Light nav icon in dark mode */
 }
 
 .nav-icon:hover {
@@ -159,10 +113,6 @@ body.dark-mode .nav-icon {
     display: none;
   }
 
-  body.dark-mode .nav-links {
-    background: rgba(50, 50, 50, 0.9); /* Darker background in dark mode */
-  }
-
   .nav-links.open {
     display: flex;
   }
@@ -173,28 +123,6 @@ body.dark-mode .nav-icon {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
-
-  body.dark-mode .nav-links a {
-    color: #ddd; /* Light text in dark mode */
-  }
-}
-
-/* Additional Global Styles for Dark Mode */
-body.dark-mode .container {
-  background-color: #121212; /* Dark background for the main container */
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
-  color: #ddd; /* Light text for headers */
-}
-
-body.dark-mode p {
-  color: #bbb; /* Light text for paragraphs */
 }
 
 /* Buttons */
@@ -207,15 +135,11 @@ button {
   transition: all 0.3s ease;
 }
 
-body.dark-mode button {
-  background-color: #444; /* Dark button background */
-  color: #ddd; /* Light text for buttons */
-}
-
 button:hover {
   background-color: #9013FE;
 }
 
-body.dark-mode button:hover {
-  background-color: #333; /* Dark button hover */
+/* Portfolio Item */
+.portfolio-item p,h1,h2,h3,h4,h5,h6 {
+  color: black;
 }
