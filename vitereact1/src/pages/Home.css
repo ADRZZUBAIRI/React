@@ -1,0 +1,267 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Section Container */
+section {
+  background: linear-gradient(135deg, rgba(0, 124, 255, 0.1) 0%, rgba(104, 164, 255, 0.7) 100%);
+  padding: 4rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 8rem 2rem;
+  border-radius: 0 !important;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.hero-title span {
+  color: #68a4ff;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #68a4ff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #68a4ff;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #68a4ff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Portfolio Section */
+.portfolio-home {
+  text-align: center;
+  background-color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Grid Layout */
+.portfolio-grid-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Portfolio Items */
+.portfolio-item-home {
+  background: linear-gradient(135deg, #e0eafc 0%, #68a4ff 100%);
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item-home h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.portfolio-item-home p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Hover Effects */
+.portfolio-item-home:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ Shine Effect */
+.portfolio-item-home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.portfolio-item-home:hover::after {
+  left: 120%;
+}
+
+/* Contact Section */
+.contact-home {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.contact-home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.contact-home p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #68a4ff;
+  transform: scale(1.2);
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #e0eafc 0%, #68a4ff 100%);
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #e0eafc;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-grid-home {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item-home {
+    padding: 1.5rem;
+  }
+
+  .contact-home h2 {
+    font-size: 2rem;
+  }
+
+  .contact-home p {
+    font-size: 1rem;
+  }
+}
