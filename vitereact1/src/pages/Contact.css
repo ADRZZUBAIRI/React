@@ -4,28 +4,28 @@
   background: linear-gradient(135deg, #f0f0f0 0%, #d9e2f3 100%);
   position: relative;
   overflow: hidden;
-  font-family: Arial, sans-serif; /* Matches theme's font */
+  font-family: Poppins;
   text-align: center;
 }
 
 /* Section Title */
 .contact h2 {
   font-size: 3rem;
-  color: #333; /* Matches theme's dark text */
+  color: #333;
   margin-bottom: 3rem;
   position: relative;
   animation: slideInFromTop 1s ease-out;
 }
 
 .contact h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #4A90E2, #9013FE); /* Matches theme's gradient */
+  background: linear-gradient(90deg, #4a90e2, #9013fe);
   border-radius: 2px;
 }
 
@@ -36,7 +36,7 @@
   padding: 2rem;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Matches theme's shadow style */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -44,7 +44,7 @@
 .contact label {
   display: block;
   font-size: 1.2rem;
-  color: #333; /* Matches theme's dark text */
+  color: #333;
   margin-bottom: 0.5rem;
   text-align: left;
   font-weight: 500;
@@ -56,22 +56,22 @@
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1.5rem;
-  border: 2px solid #e8ecef; /* Light border to match theme's background */
+  border: 2px solid #e8ecef;
   border-radius: 5px;
   font-size: 1rem;
-  font-family: Arial, sans-serif; /* Matches theme's font */
-  color: #333; /* Matches theme's dark text */
-  background: #f9f9f9; /* Slightly lighter than theme's background */
-  transition: all 0.3s ease; /* Matches theme's transition */
+  font-family: Poppins;
+  color: #333;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
   box-sizing: border-box;
 }
 
 .contact input:focus,
 .contact textarea:focus {
   outline: none;
-  border-color: #4A90E2; /* Matches theme's primary color */
+  border-color: #4a90e2;
   background: white;
-  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); /* Subtle glow with theme's color */
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
 }
 
 /* Placeholder Styling */
@@ -89,7 +89,7 @@
 
 /* Submit Button */
 .contact button {
-  background: #4A90E2; /* Matches theme's button background */
+  background: #4a90e2; /* Matches theme's button background */
   color: white; /* Matches theme's button text */
   border: none;
   padding: 0.8rem 2rem;
@@ -101,17 +101,17 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  font-family: Arial, sans-serif; /* Matches theme's font */
+  font-family: Poppins; /* Matches theme's font */
 }
 
 .contact button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #9013FE; /* Matches theme's button hover background */
+  background: #9013fe; /* Matches theme's button hover background */
   transition: left 0.4s ease;
   z-index: -1;
 }
@@ -201,7 +201,7 @@ form textarea {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   font-family: inherit;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -210,12 +210,12 @@ form textarea {
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #4CAF50;
+  border-color: #4caf50;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
 form button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
