@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap");
+
+.home {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: "Poppins", sans-serif;
+  padding: 0 2rem;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: #00ffae;
+}
+
+.hero-content span {
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #bbb;
+}
+
+.hero-img img {
+  max-width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #00ffae55;
+}
+
+.btn {
+  background: #00ffae;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  color: #121212;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00e6a0;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 3rem 0;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 0 8px #00ffae33;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* FEATURES */
+.features {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.feature {
+  background: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 6px #00ffae33;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 3rem 0;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.testimonial {
+  background: #1d1d1d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #00ffae22;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  text-align: center;
+  padding: 3rem 0;
+  background: #181818;
+  border-radius: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+}

@@ -1,0 +1,27 @@
+.footer {
+  background-color: #121212;
+  color: #888;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 4rem;
+  border-top: 1px solid #222;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00ffae;
+}
