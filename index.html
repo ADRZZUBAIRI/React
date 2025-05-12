@@ -1,0 +1,86 @@
+<div class="button-container">
+  <div class="background-glow"></div>
+  <a href="#" class="main-button" title="payment">
+    Get Started For Free
+    <svg viewBox="0 0 10 10" height="10" width="10" fill="none" class="arrow-icon">
+      <path d="M0 5h7" class="line"></path>
+      <path d="M1 1l4 4-4 4" class="arrow"></path>
+    </svg>
+  </a>
+<style>
+.button-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.background-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, indigo, pink, yellow);
+  border-radius: 12px;
+  filter: blur(10px);
+  opacity: 0.6;
+  transition: opacity 1s;
+  z-index: 0;
+}
+
+.button-container:hover .background-glow {
+  opacity: 1;
+  transition-duration: 0.2s;
+}
+
+*{
+background: black;
+}
+
+.main-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.main-button:hover {
+  background-color: #222;
+  box-shadow: 0px 5px 15px rgba(75, 85, 99, 0.3);
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  margin-top: 2px;
+  margin-left: 8px;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.line {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.main-button:hover .line {
+  opacity: 1;
+}
+
+.main-button:hover .arrow {
+  transform: translateX(3px);
+}
+
+</style>
+</div>

@@ -1,7 +1,7 @@
 // src/pages/Contact.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "./Contact.css";
+import "../css/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

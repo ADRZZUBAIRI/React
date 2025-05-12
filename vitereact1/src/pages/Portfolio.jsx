@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import "./Portfolio.css";
+import "../css/Portfolio.css";
 
 const projects = [
   {

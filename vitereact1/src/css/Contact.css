@@ -1,0 +1,230 @@
+/* Contact Section */
+.contact {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f0f0f0 0%, #d9e2f3 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: Poppins;
+  text-align: center;
+}
+
+/* Section Title */
+.contact h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 3rem;
+  position: relative;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.contact h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a90e2, #9013fe);
+  border-radius: 2px;
+}
+
+/* Contact Form */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Form Labels */
+.contact label {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Form Inputs */
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #e8ecef;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: Poppins;
+  color: #333;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background: white;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Placeholder Styling */
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #999;
+  opacity: 0.8;
+}
+
+/* Textarea Specific Styling */
+.contact textarea {
+  resize: vertical; /* Allows vertical resizing only */
+  min-height: 150px;
+}
+
+/* Submit Button */
+.contact button {
+  background: #4a90e2; /* Matches theme's button background */
+  color: white; /* Matches theme's button text */
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Matches theme's transition */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: Poppins; /* Matches theme's font */
+}
+
+.contact button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #9013fe; /* Matches theme's button hover background */
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.contact button:hover::before {
+  left: 0;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .contact {
+    padding: 3rem 0;
+  }
+
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact form {
+    padding: 1.5rem;
+  }
+
+  .contact input,
+  .contact textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .contact button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Contact Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  padding-right: 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.dark form {
+  background: rgba(30, 30, 50, 0.9);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #43a047;
+}

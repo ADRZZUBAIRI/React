@@ -1,184 +1,112 @@
 import React from "react";
-import "./Home.css";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
+import "../css/Home.css";
 
-const projects = [
-  {
-    title: "My VA Gurus",
-    link: "https://myvagurus.com",
-    description:
-      "A Virtual Assistant Business website built using WordPress and Elementor. It’s designed for efficiency and user-friendliness, showcasing services and team members.",
-  },
-  {
-    title: "Rampitus",
-    link: "https://rampitus.com",
-    description:
-      "An accessibility solutions platform with a custom design. It features products like wheelchair ramps, stairlifts, and platform lifts, focusing on inclusivity.",
-  },
-  {
-    title: "PRSRCM",
-    link: "https://prsrcm.com",
-    description:
-      "A modern website for PRSRCM, a medical billing service. It’s designed to be user-friendly and informative, showcasing their services and expertise.",
-  },
-];
-
-const services = [
-  {
-    title: "WordPress Development",
-    description:
-      "I specialize in building fast, responsive, and user-friendly websites using WordPress. Whether it's a custom theme or plugin development, I deliver high-quality websites that meet your business needs.",
-  },
-  {
-    title: "React Development",
-    description:
-      "Leveraging React, I build dynamic and highly interactive web applications. From single-page apps to complex solutions, I craft seamless user experiences with cutting-edge technologies.",
-  },
-  {
-    title: "E-Commerce Solutions",
-    description:
-      "I offer full-stack e-commerce solutions using WordPress (WooCommerce) or React. Whether you're starting a new store or enhancing an existing one, I help you create a user-friendly shopping experience.",
-  },
-];
-
-const Home = () => {
+function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <div className="home">
+      <div className="animated-bg"></div>
       {/* Hero Section */}
-      <motion.section
-        className="hero"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1 className="hero-title">
-          Hi, I'm <span>Abdul Rehman</span>
-        </h1>
-        <p className="hero-subtitle">
-          WordPress Developer | React Enthusiast | Builder of Functional and
-          Beautiful Websites
+      <section className="hero-section">
+        <div className="glass hero-glass">
+          <h1>Hi, I'm Abdul Rehman</h1>
+          <p>
+            I help businesses bring their websites to life with clean, modern
+            design & development.
+          </p>
+          <button>Let's Work Together</button>
+        </div>
+      </section>
+
+      <section className="about-home" id="about-home">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate and detail-oriented frontend developer with a strong
+          focus on creating visually appealing, accessible, and user-friendly
+          websites. With experience in building modern React-based interfaces
+          and an eye for clean UI design, I specialize in crafting digital
+          experiences that are both functional and aesthetic.
         </p>
-        <a href="#portfolio-home" className="hero-btn">
-          View My Work
-        </a>
-      </motion.section>
+        <p>
+          I’ve worked on multiple projects ranging from landing pages and
+          portfolios to fully dynamic business websites. I enjoy turning complex
+          problems into simple, beautiful designs using plain CSS and intuitive
+          layouts — including this fully glassmorphic website you're viewing!
+        </p>
+        <p>
+          Whether you’re a startup, agency, or an individual with a creative
+          idea, I can help bring it to life with performance-focused code and a
+          consistent, modern design.
+        </p>
+      </section>
 
-      <div className="content-wrapper">
-        {/* About Section */}
-        <motion.section
-          className="about"
-          id="about"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <h2>About Me</h2>
-          <p>
-            I'm a passionate web developer with over 2 years of experience in
-            WordPress and React. I focus on creating sleek, responsive, and
-            highly functional websites that align with my clients' goals. I
-            strive to build intuitive, accessible designs that deliver an
-            optimal user experience.
-          </p>
-        </motion.section>
-
-        {/* Services Section */}
-        <motion.section
-          className="services"
-          id="services"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <h2>Services</h2>
-          <div className="services-grid">
-            {services.map((service, idx) => (
-              <motion.div
-                key={idx}
-                className="service-item"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </motion.div>
-            ))}
+      {/* Services Section */}
+      <section className="services-section">
+        <h2>My Services</h2>
+        <div className="services-cards">
+          <div className="glass-card">
+            <h3>Website Design</h3>
+            <p>Modern, responsive designs tailored to your brand.</p>
           </div>
-        </motion.section>
-
-        {/* Portfolio Section */}
-        <motion.section
-          className="portfolio-home"
-          id="portfolio-home"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <h2>My Work</h2>
-          <div className="portfolio-grid-home">
-            {projects.map((project, idx) => (
-              <motion.a
-                key={idx}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="portfolio-item-home"
-                whileHover={{ scale: 1.05 }}
-                aria-label={`View project: ${project.title}`}
-              >
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </motion.a>
-            ))}
+          <div className="glass-card">
+            <h3>WordPress Development</h3>
+            <p>Custom and dynamic WordPress sites for any business.</p>
           </div>
-        </motion.section>
-
-        {/* Contact Section */}
-        <motion.section
-          className="contact-home"
-          id="contact-home"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <h2>Contact Me</h2>
-          <p>
-            Let’s collaborate! If you’re interested in working together or
-            simply want to connect, reach out via email or social media.
-          </p>
-          <div className="social-links">
-            <a
-              href="https://github.com/ADRZZUBAIRI/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="www.linkedin.com/in/abdul-rehman-z"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="mailto:associatewithabdulrehman@gmail.com"
-              aria-label="Email Abdul Rehman"
-            >
-              <FaEnvelope />
-            </a>
+          <div className="glass-card">
+            <h3>Frontend in React</h3>
+            <p>Interactive UI and smooth functionality using React.</p>
           </div>
-        </motion.section>
-      </div>
-    </motion.div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="projects-section">
+        <h2>Featured Projects</h2>
+        <div className="projects-cards">
+          <div className="glass-card">
+            <h3>Rampitus</h3>
+            <p>Accessibility-focused ramp solutions website.</p>
+          </div>
+          <div className="glass-card">
+            <h3>My VA Gurus</h3>
+            <p>Virtual assistant services built for businesses.</p>
+          </div>
+          <div className="glass-card">
+            <h3>11 Values</h3>
+            <p>Modern values-based website with clean animations.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials-section">
+        <h2>Testimonials</h2>
+        <div className="testimonials-cards">
+          <div className="glass-card">
+            <p>
+              "Abdul delivered exactly what I wanted – professional, fast, and
+              top-notch."
+            </p>
+            <span>- John D.</span>
+          </div>
+          <div className="glass-card">
+            <p>
+              "Great communication and a fantastic-looking website. Highly
+              recommended!"
+            </p>
+            <span>- Sarah A.</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta-section">
+        <div className="glass cta-glass">
+          <h2>Ready to build something amazing?</h2>
+          <button>Contact Me</button>
+        </div>
+      </section>
+    </div>
   );
-};
+}
 
 export default Home;

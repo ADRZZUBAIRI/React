@@ -5,7 +5,7 @@
   background-color: #181818;
   padding: 1rem 2rem;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -33,4 +33,20 @@
 
 .nav-links a:hover {
   color: #00ffae;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: #00ffae;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #00c38b;
 }

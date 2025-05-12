@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
-import "./Navbar.css";
+import "../css/Navbar.css";
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
